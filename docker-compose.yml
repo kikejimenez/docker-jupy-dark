@@ -1,0 +1,14 @@
+version: "3"
+services:
+  image: ejimenezr/jupy-dark
+  user: root
+  ports:
+    - "8888:8888"
+  volumes:
+    - .:/wd
+    - /home/username
+  environment:
+    NB_USER: "username"
+    JUPYTER_ENABLE_LAB: "yes"
+    GRANT_SUDO: "yes"
+  working_dir: /wd
